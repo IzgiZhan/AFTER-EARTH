@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6rn7xq35184"]
+
+[ext_resource type="Script" uid="uid://cp6svflxv8078" path="res://bunker.gd" id="1_inis6"]
+
+[node name="Bunker" type="Node2D" unique_id=524736993]
+script = ExtResource("1_inis6")

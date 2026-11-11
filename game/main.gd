@@ -1,8 +1,5 @@
 extends Node2D
 
-# Надпись под кнопками, в которой показываем сообщения игроку.
-var status_label: Label
-
 
 # Запускается один раз, когда сцена появляется на экране.
 func _ready() -> void:
@@ -51,12 +48,6 @@ func _ready() -> void:
 	quit_button.pressed.connect(on_quit_pressed)
 	menu.add_child(quit_button)
 
-	# Строка для сообщений
-	status_label = Label.new()
-	status_label.add_theme_font_size_override("font_size", 20)
-	status_label.position = Vector2(84, 530)
-	add_child(status_label)
-
 
 # Создаёт одну кнопку меню с нужным текстом и размером.
 func make_button(button_text: String) -> Button:
@@ -67,9 +58,9 @@ func make_button(button_text: String) -> Button:
 	return button
 
 
-# Вызывается при нажатии New Game.
+# Вызывается при нажатии New Game: открывает сцену бункера.
 func on_new_game_pressed() -> void:
-	status_label.text = "New Game: the bunker will be added in the next stage."
+	get_tree().change_scene_to_file("res://bunker.tscn")
 
 
 # Вызывается при нажатии Quit: закрывает игру.
