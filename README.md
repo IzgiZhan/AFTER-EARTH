@@ -1,60 +1,63 @@
 # AFTER EARTH
 
-**Rebuild Humanity. Create a New Civilization.**
+**Восстанови человечество. Создай новую цивилизацию.**
 
-AFTER EARTH is a 2D top-down post-apocalyptic survival, strategy and civilization-building game. The player wakes up alone in a damaged bunker after a nuclear war, restores it step by step, meets other survivors and gradually hands the work over: first to people, then to machines.
+AFTER EARTH — это 2D-игра с видом сверху в жанре постапокалиптического выживания, стратегии и строительства цивилизации. Герой приходит в себя один в повреждённом бункере после ядерной войны, шаг за шагом восстанавливает его, встречает других выживших и постепенно передаёт им работу: сначала людям, потом машинам.
 
-Core idea: **Automate it.** You start by doing everything with your own hands, then survivors with professions work for the settlement, and finally robots and production lines do the work for you.
+Главная идея: **Automate it.** Сначала игрок всё делает своими руками, затем за поселение работают выжившие со своими профессиями, а в конце работу выполняют роботы и производственные линии.
 
-## Current status: playable prototype
+## Текущее состояние: играбельный прототип
 
-Implemented so far:
+Уже сделано:
 
-- Main menu with settings (language: English / Russian, volume, fullscreen)
-- Story intro: six illustrated scenes about the war and the bunker
-- Three-level bunker: living quarters, supply floor and mine
-- Step-by-step tutorial with a guiding arrow
-- Five story notes with illustrations (bunker map, tools and weapons, mutants, resources, reactor)
-- Tools that unlock the bunker: crowbar, storage key, pickaxe, elevator fuse, lift lever
-- Generator that restores power when fuelled with coal
-- Survival stats: Health, Energy, Hunger, Thirst, Radiation
-- Outside world: resources, ruins, radiation zone, day and night, mutants, knife combat
-- Automatic saving and the Continue button
-- Sound effects generated in code and menu music
+- Главное меню с настройками (язык: русский и английский, громкость, полный экран)
+- Сюжетное вступление: шесть иллюстрированных сцен о войне и бункере
+- Бункер из трёх уровней: жилой, снабжение и шахта
+- Пошаговое обучение со стрелкой, которая ведёт к цели
+- Пять сюжетных записок с рисунками (карта бункера, инструменты и оружие, мутанты, ресурсы, реактор)
+- Панель из пяти слотов: один предмет в руке, действия только подходящим инструментом
+- Рюкзак с рисунками предметов
+- Инструменты, открывающие бункер: лом, ключ от склада, кирка, предохранитель лифта, рычаг подъёмника
+- Генератор, который возвращает свет, если загрузить в него уголь
+- Шкалы выживания: здоровье, энергия, сытость, вода, радиация
+- Мир снаружи: ресурсы, руины, зона радиации, смена дня и ночи, мутанты, бой
+- Автоматическое сохранение и кнопка «Продолжить»
+- Звуки, созданные кодом, и музыка в меню
 
-Planned next: hotbar with one item in hand, survivors with professions who can be let into the bunker, a task board, production chains, robots, cities, diplomacy and the six-chapter story campaign. The full design is in `docs/GAME_DESIGN_DOCUMENT.md`.
+В планах: выжившие с профессиями, которых можно впустить в бункер или не впустить, доска задач, производственные цепочки, роботы, города, дипломатия и сюжетная кампания из шести глав. Полное описание лежит в `docs/GAME_DESIGN_DOCUMENT.md`.
 
-## Controls
+## Управление
 
-| Key | Action |
+| Клавиша | Действие |
 |---|---|
-| W A S D or arrows | Move |
-| E | Interact, read, pick up |
-| Space | Attack with the knife |
-| F / R | Eat / drink |
-| I | Backpack |
-| Esc | Save and return to the menu |
+| W A S D или стрелки | Ходьба |
+| E | Взаимодействие, чтение, подбор предметов |
+| 1–5 или колёсико мыши | Выбор предмета в руке |
+| Q | Использовать предмет в руке (поесть, попить) |
+| Пробел | Удар |
+| I | Рюкзак |
+| Esc | Сохранить игру и выйти в меню |
 
-## How to run
+## Как запустить
 
-1. Install Godot 4.7 (standard version) from https://godotengine.org
-2. Download this repository (Code → Download ZIP) and unpack it
-3. In Godot press Import and select `game/project.godot`
-4. Press the Play button
+1. Установите Godot 4.7 (обычная версия) с сайта https://godotengine.org
+2. Скачайте этот репозиторий (Code → Download ZIP) и распакуйте
+3. В Godot нажмите «Импорт» и выберите файл `game/project.godot`
+4. Нажмите кнопку запуска
 
-## Project structure
+## Структура проекта
 
-- `game/` : the Godot project (all scripts and scenes)
-- `docs/` : game design document
-- `README.md` : this file
+- `game/` : проект Godot (все скрипты и сцены)
+- `docs/` : дизайн-документ игры
+- `README.md` : этот файл
 
-## Technology
+## Технологии
 
-- Engine: Godot 4.7, language: GDScript
-- All graphics are drawn by code, no external image files
-- Renderer: Compatibility (suitable for web export)
+- Движок: Godot 4.7, язык GDScript
+- Вся графика нарисована кодом, без внешних картинок
+- Рендерер: Compatibility (подходит для запуска в браузере)
 
-## Credits
+## Авторы
 
-- Game concept and development: IzgiZhan
-- Music: "Day of Chaos" by Kevin MacLeod (incompetech.com), licensed under Creative Commons Attribution
+- Идея и разработка: IzgiZhan
+- Музыка: «Day of Chaos», Kevin MacLeod (incompetech.com), лицензия Creative Commons Attribution
